@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul,
+        ol {
+            list-style: none;
+        }
+        
+        .slide {
+            overflow: hidden;
+            position: relative;
+            width: 590px;
+            height: 470px;
+            margin: 50px auto;
+        }
+        
+        .arrow-l,
+        .arrow-r {
+            position: absolute;
+            width: 30px;
+            height: 60px;
+            line-height: 60px;
+            background-color: rgba(0, 0, 0, .3);
+            top: 50%;
+            margin-top: -30px;
+            z-index: 99;
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .arrow-r {
+            right: 0;
+        }
+        
+        .slide ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4000px;
+        }
+        
+        .slide ul li {
+            float: left;
+        }
+        
+        .slide ol {
+            position: absolute;
+            bottom: 10px;
+            left: 30px;
+        }
+        
+        .slide ol li {
+            float: left;
+            width: 10px;
+            height: 10px;
+            margin: 0 3px;
+            /* box-shadow: 0 0 2px 2px #fff; */
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, .3);
+            cursor: pointer;
+        }
+        
+        .slide .current {
+            background-color: #fff;
+        }
+    </style>
+    <script src="./js/animate.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="arrow-l">&lt;</div>
+        <div class="arrow-r">&gt;</div>
+        <!-- ul是放图片的盒子 -->
+        <ul>
+            <li>
+                <img src="./images/pic1.webp" alt="">
+            </li>
+            <li>
+                <img src="./images/pic2.jpg" alt="">
+            </li>
+            <li>
+                <img src="./images/pic3.jpg" alt="">
+            </li>
+            <li>
+                <img src="./images/pic4.jpg" alt="">
+            </li>
+        </ul>
+
+        <!-- ol 是放小点的盒子 -->
+        <ol>
+        </ol>
+    </div>
+</body>
+
+</html>
